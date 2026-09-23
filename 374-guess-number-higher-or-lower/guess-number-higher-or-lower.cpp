@@ -17,12 +17,12 @@ public:
 
             int guessNum= guess(mid);
 
-            if(guessNum == 0){
+            if(guessNum == 0){// guessnum is equals to num
                 return mid;
-            }else if(guessNum == -1){
+            }else if(guessNum == -1){ // guessNUm is higher than num
                 high= mid-1;
             }else{
-                low= mid +1;
+                low= mid +1; // guessNum is less than num
             }
 
         }
