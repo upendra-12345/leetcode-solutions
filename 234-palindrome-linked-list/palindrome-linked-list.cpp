@@ -10,29 +10,24 @@
  */
 class Solution {
 public:
-    
-
     bool isPalindrome(ListNode* head) {
         vector<int> ans;
-        while(head != NULL){
-            ans.push_back(head->val);
-            head= head->next;
+        ListNode* curr= head;
+        while(curr != NULL){
+            ans.push_back(curr->val);
+            curr= curr->next;
         }
-
-        
-        int n= ans.size();
         int st=0;
-        int end= n-1;
-        
-        while(st<end){
+        int end= ans.size()-1;
+
+        while(st<= end){
             if(ans[st] != ans[end]){
                 return false;
-                
             }
             st++;
             end--;
         }
-        
         return true;
+        
     }
 };
