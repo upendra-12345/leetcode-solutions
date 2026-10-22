@@ -10,14 +10,15 @@ public:
         st.push(value);
         if(minst.empty() || value <= minst.top()){
             minst.push(value);
-        }else{
-            minst.push(minst.top());
         }
     }
     
     void pop() {
+        if(st.top()== minst.top()){
+            minst.pop();
+        }
         st.pop();
-        minst.pop();
+        
         
     }
     
