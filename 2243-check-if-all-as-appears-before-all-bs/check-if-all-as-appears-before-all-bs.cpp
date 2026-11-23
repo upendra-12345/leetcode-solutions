@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool checkString(string s) {
-        return is_sorted(s.begin(),s.end());
+        return s.find("ba")== string:: npos;
         
     }
 };
